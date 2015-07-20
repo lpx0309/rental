@@ -8,7 +8,14 @@ class Index extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['title']='阿斯蒂芬';
+		$data=array();
+		$data['title']='工具租赁';
 		$this->load->view('default',$data);//主页
+	}
+	
+	public function login(){
+		$data['title']='登录';
+		$this->load->view('login',$data);//主页
+		
 	}
 }
