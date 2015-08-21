@@ -6,17 +6,13 @@ class Index extends CI_Controller {
 	{
 		parent::__construct();
 	}
+	
 	public function index()
 	{
 		$data=array();
-		$data['title']='工具租赁';
-		$this->load->view('default',$data);//主页
+		$data['title']='闲租族';
+		$data['tools']=$this->db->query("SELECT * FROM re_tool")->result_array();
+		$this->load->view('index',$data);//主页
 	}
 	
-	public function login(){
-		$data['title']='登录';
-		//$this->load->view('login',$data);//主页
-		//$file_arr=file_get_contents($this->config->base_url().'login.php');
-		//echo ($file_arr);
-	}
 }
