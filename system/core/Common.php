@@ -850,3 +850,36 @@ if ( ! function_exists('function_usable'))
 		return FALSE;
 	}
 }
+
+
+//根据类，方法和参数生成动态页url，生成的url与routes.php里自定义路由相对应
+if ( ! function_exists('makeurl'))
+{
+	function makeurl($controller=false,$function=false,$val=false,$suffix=false){
+		$url_str=config_item('base_url');
+		
+		if(!$controller){
+			return "javascript:alert('建设中');";
+			//return $url_str;
+		}
+		if(!$function){
+			$function='index';
+		}
+		
+		$url_str.=$controller.'/'.$function;
+		
+		if($val){
+			if(is_array($val)){
+				$val=implode('/',$val);
+			}
+			$url_str.='/'.$val;
+		}
+		
+		if(!$suffix){
+			$suffix=config_item('url_suffix');
+		}
+		$url_str.=$suffix;
+		
+		return $url_str;
+	}
+}

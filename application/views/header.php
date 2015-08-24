@@ -25,20 +25,20 @@
         <li><a href="javascript:;">	Q&A	</a></li>
       </ul>
     </div>-->
-    <div id="navbar" class="collapse navbar-collapse">
+    
+    <!--<div id="navbar" class="collapse navbar-collapse">-->
       <ul class="nav navbar-nav navbar-right">
         <li><a href="javascript:;" class="glyphicon glyphicon-user"></a></li>
         <li class="dropdown">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">李沛新&nbsp;<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="javascript:;" onclick="pwdmdf()">修改密码</a></li>
+            <li><a href="<?php echo makeurl('Login'); ?>" onclick="pwdmdf()">修改密码</a></li>
             <li class="divider"></li>
-            <li><a href="">登出</a></li>
+            <li><a href="<?php echo makeurl('Login','logout'); ?>">登出</a></li>
           </ul>
         </li>
       </ul>
-      
-    </div>
+    <!--</div>-->
     
   </div>
 </nav>
