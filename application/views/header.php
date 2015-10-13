@@ -60,7 +60,7 @@
       </div>
     </div>
     
-    <div class="form-group">
+    <div class="form-group has-error">
       <label class="sr-only" for="">密码</label>
       <div class="input-group">
         <div class="input-group-addon">
