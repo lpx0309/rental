@@ -12,7 +12,7 @@ class Index extends CI_Controller {
 		$data=array();
 		$data['title']='闲租族';
 		$data['tools']=$this->db->query("SELECT * FROM re_tool")->result_array();
-		$this->load->view('index',$data);//主页
+		$this->load->view('main',$data);//主页
 	}
 	
 }
