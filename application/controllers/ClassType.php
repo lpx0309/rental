@@ -7,7 +7,7 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class classType extends CI_Controller {
+class ClassType extends CI_Controller {
     function __construct()
     {
         parent::__construct();
