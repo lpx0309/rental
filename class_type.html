@@ -12,11 +12,44 @@
 		$(function(){
 			$.ajax({
 				url:'classType',
-				dataType:'json';
+				dataType:'json',
 				success:function(data){
 					console.log(data);
-					//$('#class_type_content').html(1);
-					
+					var class_type_content = '';
+					for(i in data){
+						class_type_content+='<tr>';
+						
+						class_type_content+='<td>';	
+						class_type_content+=data[i].class_type;	
+						class_type_content+='</td>';	
+						
+						class_type_content+='<td>';	
+						class_type_content+=data[i].dp_is_view;	
+						class_type_content+='</td>';	
+						
+						class_type_content+='<td>';	
+						class_type_content+=data[i].status;	
+						class_type_content+='</td>';	
+						
+						class_type_content+='<td>';	
+						class_type_content+=data[i].creator;	
+						class_type_content+='</td>';	
+						
+						class_type_content+='<td>';	
+						class_type_content+=data[i].create_time;	
+						class_type_content+='</td>';	
+						
+						class_type_content+='<td>';	
+						class_type_content+=data[i].last_editor;	
+						class_type_content+='</td>';	
+
+						class_type_content+='<td>';	
+						class_type_content+=data[i].last_edit_time;	
+						class_type_content+='</td>';	
+						
+						class_type_content+='</tr>';	
+					}
+					$('#class_type_content').html(class_type_content);
 				}
 			});
 		});
